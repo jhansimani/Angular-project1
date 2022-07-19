@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
     this.openNavbar = false;
   }
   goTo(route: string) {
+    console.log(route);
     this.router.navigate([route]);
     this.openNavbar = false;
   }

@@ -7,15 +7,26 @@
     <li class="nav-link"><a routerLink="users">Users</a></li>
     <li class="nav-link"><a routerLink="users">About</a></li>
     <li class="nav-link"><a routerLink="users">Contact</a></li>
-    <li class="nav-link"><a routerLink="users">Login</a></li>
+    <li class="nav-link"><a routerLink="register">Login</a></li>
   </ul>
 </nav>
 <div class="side-bar show-side-bar" *ngIf="openNavbar"></div>
-<nav class="navigation-bar show-navigation" (appOutSideClick)="onClose()" *ngIf="openNavbar">
+<nav
+  class="navigation-bar show-navigation"
+  (appOutSideClick)="onClose()"
+  *ngIf="openNavbar"
+>
   <ul class="navigation-bar-nav-links">
-    <li class="nav-link" (click)="goTo('users')"><a routerLink="users">Users</a></li>
-    <li class="nav-link" (click)="goTo('users')"><a routerLink="users">About</a></li>
-    <li class="nav-link" (click)="goTo('users')"><a routerLink="users">Contact</a></li>
-    <li class="nav-link" (click)="goTo('users')"><a routerLink="users">Login</a></li>
+    <li class="nav-link" (click)="goTo('users')">
+      <a routerLink="users">Users</a>
+    </li>
+    <li class="nav-link" (click)="goTo('users')">
+      <a routerLink="users">About</a>
+    </li>
+    <li class="nav-link" (click)="goTo('users')">
+      <a routerLink="users">Contact</a>
+    </li>
+    < class="nav-link" (click)="goTo('register')">
+    <li class="nav-link"><a routerLink="register">Login</a></li>
   </ul>
 </nav>
