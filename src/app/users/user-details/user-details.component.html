@@ -1,0 +1,23 @@
+<div class="card" *ngIf="user">
+  <div class="card-body">
+    <h5 class="card-title">{{ user?.firstName }} {{ user.lastName }}</h5>
+    <p class="card-text">email: {{ user.email }}</p>
+    <p class="card-text">DOB: {{ user.DOB }}</p>
+    <p class="card-text">Mobile: {{ user.mobile }}</p>
+    <p class="card-text">Address: {{ user.address.street }}</p>
+    <p class="card-text">City :{{ user.address.city }}</p>
+    <p class="card-text">State:{{ user.address.state }}</p>
+    <p class="card-text">Zip:{{ user.address.zip }}</p>
+
+    <label>Skills</label>
+    <input
+      type="text"
+      (keyup)="OnKeyUp($event)"
+      (keydown)="onKeydown($event)"
+      placeholder="type skill and enter to add "
+      class="form-control"
+    />
+    <br />
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>

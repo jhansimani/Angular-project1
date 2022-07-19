@@ -1,0 +1,27 @@
+.col {
+  // height: 300px;
+}
+.welcome-section {
+  // bord
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(47, 177, 182);
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+  }
+  p {
+    color: #fff;
+  }
+}
+.sign-in-section {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

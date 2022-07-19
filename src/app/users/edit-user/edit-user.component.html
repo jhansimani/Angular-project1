@@ -1,0 +1,281 @@
+<div class="container">
+  <form class="row g-3" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="col-md-6">
+      <label for="inputFirstName" class="form-label">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputFirstName"
+        placeholder="First Name"
+        formControlName="firstName"
+      />
+      <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="
+          (userForm.controls['firstName']?.touched ||
+            userForm.controls['firstName']?.dirty) &&
+          !userForm.controls['firstName']?.valid
+        "
+      >
+        <p *ngIf="userForm.controls['firstName'].errors?.['required']">
+          First Name is required
+        </p>
+        <p *ngIf="userForm.controls['firstName'].errors?.['maxlength']">
+          Maxlength is 10 characters
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <label for="inputLastName" class="form-label">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputLastName"
+        placeholder="Last Name"
+        formControlName="lastName"
+      />
+      <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="
+          (userForm.controls['lastName'].touched ||
+            userForm.controls['lastName'].dirty) &&
+          !userForm.controls['lastName'].valid
+        "
+      >
+        <p *ngIf="userForm.controls['lastName'].errors?.['required']">
+          Last Name is required
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="inputEmail4"
+        placeholder="email"
+        formControlName="email"
+      />
+      <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="
+          (userForm.controls['email'].touched ||
+            userForm.controls['email'].dirty) &&
+          !userForm.controls['email'].valid
+        "
+      >
+        <p *ngIf="userForm.controls['email'].errors?.['required']">
+          Email is required
+        </p>
+        <p *ngIf="userForm.controls['email'].errors?.['email']">
+          Enter correct email
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="inputPassword4"
+        placeholder="password"
+        formControlName="password"
+      />
+      <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="
+          (userForm.controls['password'].touched ||
+            userForm.controls['password'].dirty) &&
+          !userForm.controls['password'].valid
+        "
+      >
+        <p *ngIf="userForm.controls['password'].errors?.['required']">
+          Password is required
+        </p>
+      </div>
+    </div>
+
+    <div formGroupName="address" class="row">
+      <div class="col-md-3">
+        <label for="inputStreet" class="form-label">Street</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputStreet"
+          formControlName="street"
+        />
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="(street?.touched || street?.dirty) && !street?.valid"
+        >
+          <p *ngIf="street?.errors?.['required']">street is required</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="inputCity" class="form-label">City</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputCity"
+          formControlName="city"
+        />
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="(city?.touched || city?.dirty) && !city?.valid"
+        >
+          <p *ngIf="city?.errors?.['required']">city is required</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="inputState" class="form-label">State</label>
+        <select id="inputState" class="form-select" formControlName="state">
+          <option selected>Choose...</option>
+          <option value="AP">AP</option>
+          <option value="UP">UP</option>
+          <option value="MP">MP</option>
+        </select>
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="(state?.touched || state?.dirty) && !state?.valid"
+        >
+          <p *ngIf="state?.errors?.['required']">state is required</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputZip"
+          formControlName="zip"
+        />
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="(zip?.touched || zip?.dirty) && !zip?.valid"
+        >
+          <p *ngIf="zip?.errors?.['required']">zip is required</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="inputMobile" class="form-label">Date Of Birth</label>
+      <input
+        type="date"
+        class="form-control"
+        id="inputDOB"
+        placeholder="Date Of Birth"
+        formControlName="DOB"
+      />
+      <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="
+          (userForm.controls['DOB'].touched ||
+            userForm.controls['DOB'].dirty) &&
+          !userForm.controls['DOB'].valid
+        "
+      >
+        <p *ngIf="userForm.controls['DOB'].errors?.['required']">
+          DOB is required
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="inputMobile" class="form-label">Mobile No</label>
+      <input
+        type="number"
+        class="form-control"
+        id="inputMobile"
+        placeholder="Mobile"
+        formControlName="mobile"
+      />
+      <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="
+          (userForm.controls['mobile'].touched ||
+            userForm.controls['mobile'].dirty) &&
+          !userForm.controls['mobile'].valid
+        "
+      >
+        <p *ngIf="userForm.controls['mobile'].errors?.['required']">
+          mobile is required
+        </p>
+      </div>
+    </div>
+    <div class="col-12">
+      <label class="form-label">Gender</label> <br />
+      <input
+        type="radio"
+        class="form-check-input me-3"
+        formControlName="gender"
+        value="male"
+        id="male"
+      />
+      <label for="male" class="me-3">Male</label>
+      <input
+        type="radio"
+        class="form-check-input me-3"
+        formControlName="gender"
+        value="female"
+        id="female"
+      /><label for="female" class="me-3">Female</label>
+      <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="
+          (userForm.controls['gender'].touched ||
+            userForm.controls['gender'].dirty) &&
+          !userForm.controls['gender'].valid
+        "
+      >
+        <p *ngIf="userForm.controls['gender'].errors?.['required']">
+          gender is required
+        </p>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="gridCheck"
+          formControlName="terms"
+        />
+        <label class="form-check-label" for="gridCheck"> Check me out </label>
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="
+            (userForm.controls['terms'].touched ||
+              userForm.controls['terms'].dirty) &&
+            !userForm.controls['terms'].valid
+          "
+        >
+          <p *ngIf="userForm.controls['terms'].errors?.['requiredTrue']">
+            terms is required
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="!userForm.valid"
+      >
+        Sign in
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,24 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: green;
+  opacity: 0.25;
+  &.closed {
+    display: none;
+  }
+}
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  width: 400px;
+  z-index: 100;
+  &.closed {
+    display: none;
+  }
+}

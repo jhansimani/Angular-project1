@@ -1,0 +1,21 @@
+<nav class="nav">
+  <a routerLink="/" class="Logo">Home</a>
+  <button class="toggle-btn visible" (click)="openNav()">
+    <ion-icon name="menu-outline"></ion-icon>
+  </button>
+  <ul class="nav-links">
+    <li class="nav-link"><a routerLink="users">Users</a></li>
+    <li class="nav-link"><a routerLink="users">About</a></li>
+    <li class="nav-link"><a routerLink="users">Contact</a></li>
+    <li class="nav-link"><a routerLink="users">Login</a></li>
+  </ul>
+</nav>
+<div class="side-bar show-side-bar" *ngIf="openNavbar"></div>
+<nav class="navigation-bar show-navigation" (appOutSideClick)="onClose()" *ngIf="openNavbar">
+  <ul class="navigation-bar-nav-links">
+    <li class="nav-link" (click)="goTo('users')"><a routerLink="users">Users</a></li>
+    <li class="nav-link" (click)="goTo('users')"><a routerLink="users">About</a></li>
+    <li class="nav-link" (click)="goTo('users')"><a routerLink="users">Contact</a></li>
+    <li class="nav-link" (click)="goTo('users')"><a routerLink="users">Login</a></li>
+  </ul>
+</nav>

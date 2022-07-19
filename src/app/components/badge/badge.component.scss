@@ -1,0 +1,15 @@
+.custom-badge {
+  background-color: red;
+  display: inline-flex;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4px 8px;
+  &.close {
+    display: none;
+  }
+  .custom__badge__text {
+    // display: inline-block;
+  }
+}

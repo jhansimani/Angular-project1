@@ -1,0 +1,13 @@
+<div class="panel">
+  <div class="panel-header" (click)="onClose()">
+    <p>{{ heading }}</p>
+
+    <ion-icon
+      name="chevron-down-outline"
+      [ngClass]="[opened ? 'open' : '']"
+    ></ion-icon>
+  </div>
+  <div class="panel-body" [ngClass]="{ open: opened }">
+    <ng-content></ng-content>
+  </div>
+</div>

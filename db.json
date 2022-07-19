@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "firstName": "Jhansimani",
+      "lastName": "Maradana",
+      "email": "test1@gmail.com",
+      "password": "123456",
+      "address": {
+        "street": "7-32/7",
+        "city": "Bobbili",
+        "state": "AP",
+        "zip": "535558"
+      },
+      "DOB": "2022-07-12",
+      "mobile": 8907654321,
+      "gender": "female",
+      "terms": true,
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)" class="sign-in-form">
+  <div class="mb-3">
+    <label class="form-label"> email</label>
+    <input
+      type="email"
+      placeholder="email"
+      name="email"
+      ngModel
+      #email="ngModel"
+      class="form-control"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label"> Password</label>
+    <input
+      type="password"
+      placeholder="password"
+      name="password"
+      ngModel
+      #password="ngModel"
+      class="form-control"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Sign In</button>
+  <p>Don't have account please register here</p>
+  <a routerLink="/register">Register</a>
+</form>

@@ -1,0 +1,120 @@
+@import "../assests/_varibles";
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 48px;
+  background-color: $primary-color;
+  align-items: center;
+  a {
+    text-decoration: none;
+  }
+  .Logo {
+    width: 100px;
+    font-size: 18px;
+    color: $secondary-color;
+    font-weight: 600;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+    a {
+      font-size: 16px;
+      color: $secondary-color;
+      font-weight: 600;
+      transition: all 0s ease-in-out 0s;
+      padding: 10px;
+      &:hover {
+        color: $primary-color;
+        background-color: $secondary-color;
+      }
+    }
+  }
+  .toggle-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: $secondary-color;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    ion-icon {
+      color: $primary-color;
+      font-size: 24px;
+    }
+  }
+}
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cdcdcd;
+  opacity: 0.75;
+  z-index: 1;
+ display: none;
+}
+.navigation-bar {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 40%;
+  opacity: 1;
+  background-color: $secondary-color;
+  color: $primary-color;
+  .navigation-bar-nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    list-style-type: none;
+    .nav-link {
+      padding: 12px;
+    }
+    a {
+      text-decoration: none;
+      color: $primary-color;
+    }
+  }
+}
+@media (max-width: 1326px) {
+  .nav {
+    max-width: 1326px;
+  }
+}
+
+@media (max-width: 1200) {
+  .nav {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    max-width: 769px;
+  }
+}
+@media (max-width: 576px) {
+  .nav {
+    max-width: 576px;
+    padding-left: 24px;
+    .nav-links {
+      display: none;
+    }
+    .visible {
+      display: flex;
+    }
+  }
+  .show-side-bar {
+    display: block;
+  }
+  .show-navigation {
+    display: block;
+  }
+}
